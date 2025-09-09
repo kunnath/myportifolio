@@ -13,10 +13,10 @@ const Contact = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600">
-            Let's Connect
+            Let&apos;s Connect
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Interested in elevating your quality assurance strategy? Let's discuss how we can work together.
+            Interested in elevating your quality assurance strategy? Let&apos;s discuss how we can work together.
           </p>
         </motion.div>
 

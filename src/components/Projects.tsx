@@ -575,28 +575,7 @@ const Projects = () => {
     }
   ];
 
-  const skillCategories = {
-    qaAutomation: {
-      title: "QA & Automation",
-      skills: ["Test Architecture", "Test Automation", "Cross-border QA", "Strategic Planning", "Quality Consulting", "Playwright"],
-      colorClass: "bg-blue-50 text-blue-700 border-blue-200 hover:bg-blue-100 hover:text-blue-800"
-    },
-    dataScience: {
-      title: "Data Science & AI",
-      skills: ["TensorFlow", "PyTorch", "Scikit-learn", "Neural Networks", "Computer Vision", "Natural Language Processing", "Deep Learning"],
-      colorClass: "bg-purple-50 text-purple-700 border-purple-200 hover:bg-purple-100 hover:text-purple-800"
-    },
-    dataProcessing: {
-      title: "Data Processing & Visualization",
-      skills: ["NumPy", "Pandas", "PySpark", "Matplotlib", "Seaborn"],
-      colorClass: "bg-green-50 text-green-700 border-green-200 hover:bg-green-100 hover:text-green-800"
-    },
-    mlops: {
-      title: "MLOps & Analysis",
-      skills: ["MLflow", "Docker", "Kubernetes", "CI/CD for ML", "Statistical Analysis", "Time Series Analysis", "A/B Testing"],
-      colorClass: "bg-indigo-50 text-indigo-700 border-indigo-200 hover:bg-indigo-100 hover:text-indigo-800"
-    }
-  };
+
 
   return (
     <section id="projects" className="py-20 bg-gradient-to-b from-gray-50 to-white">

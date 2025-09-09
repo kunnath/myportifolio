@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 const Hero = () => {
   return (
@@ -24,9 +25,11 @@ const Hero = () => {
           transition={{ delay: 0.2, duration: 0.5 }}
           className="w-32 h-32 mx-auto mb-8 rounded-full overflow-hidden ring-4 ring-blue-500 ring-offset-4"
         >
-          <img
+          <Image
             src="/kunn.png"
             alt="Profile"
+            width={128}
+            height={128}
             className="w-full h-full object-cover"
           />
         </motion.div>
