@@ -403,7 +403,7 @@ const Projects = () => {
       ]
     },
     {
-      title: "IflightNeo & Airline Solutions Portfolio",
+      title: "IflightNeo & Airline Solutions",
       client: "IBS Software Pvt. Ltd",
       location: "Trivandrum, India",
       duration: "April 2014 - January 2016",
