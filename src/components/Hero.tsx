@@ -61,17 +61,17 @@ const Hero = () => {
           className="flex flex-wrap justify-center gap-4"
         >
           <a
-            href="#projects"
+            href="#automation-solutions"
             className="group relative px-8 py-3 rounded-full bg-gradient-to-r from-blue-600 to-blue-700 text-white font-semibold overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/30"
           >
-            <span className="relative z-10">View Projects</span>
+            <span className="relative z-10">Automation Solutions</span>
             <div className="absolute inset-0 bg-gradient-to-r from-blue-700 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
           </a>
           <a
-            href="#experience"
+            href="#project-portfolio"
             className="group relative px-8 py-3 rounded-full bg-gradient-to-r from-purple-600 to-purple-700 text-white font-semibold overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/30"
           >
-            <span className="relative z-10">View Experience</span>
+            <span className="relative z-10">Project Portfolio</span>
             <div className="absolute inset-0 bg-gradient-to-r from-purple-700 to-pink-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
           </a>
           <a
@@ -90,7 +90,7 @@ const Hero = () => {
           className="mt-16 flex justify-center items-center"
         >
           <a
-            href="#projects"
+            href="#automation-solutions"
             className="animate-bounce flex flex-col items-center text-gray-400 hover:text-gray-600 transition-colors duration-300"
           >
             <span className="text-sm mb-2">Scroll to explore</span>

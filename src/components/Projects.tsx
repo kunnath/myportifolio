@@ -578,7 +578,7 @@ const Projects = () => {
 
 
   return (
-    <section id="projects" className="py-20 bg-gradient-to-b from-gray-50 to-white">
+    <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
       <div className="max-w-7xl mx-auto px-4">
         <motion.div
           initial={{ opacity: 0 }}
@@ -632,16 +632,22 @@ const Projects = () => {
           ))}
         </div>
 
-        {/* Automation Tools Section */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.5 }}
-          className="mt-20"
-        >
-          <h3 className="text-3xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600">
-            Automation Solutions
-          </h3>
+        {/* Automation Solutions Section */}
+        <section id="automation-solutions" className="mb-20">
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600">
+              Automation Solutions
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Innovative AI-Powered Testing and Automation Frameworks
+            </p>
+          </motion.div>
+
           <div className="grid gap-8 md:grid-cols-2">
             {automationTools.map((tool, index) => (
               <motion.div
@@ -688,126 +694,128 @@ const Projects = () => {
               </motion.div>
             ))}
           </div>
-        </motion.div>
+        </section>
 
         {/* Projects Section */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.5 }}
-          className="mt-20"
-        >
-          <h3 className="text-3xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600">
-            Project Portfolio
-          </h3>
-          <div className="grid gap-8 md:grid-cols-2">
-            {projects.map((project, index) => (
-              <motion.div
-                key={project.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-                className="group bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden hover:-translate-y-2"
-              >
-                <div className="p-8">
-                  <div className="mb-6">
-                    <h4 className="text-xl font-bold mb-2 text-gray-800 group-hover:text-blue-600 transition-colors">
-                      {project.title}
-                    </h4>
-                    {project.client && (
-                      <p className="text-gray-600 mb-1">{project.client}</p>
-                    )}
-                    <div className="flex flex-wrap gap-2 items-center text-sm text-gray-500">
-                      {project.duration && (
-                        <span className="flex items-center">
-                          <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                          </svg>
-                          {project.duration}
-                        </span>
+        <section id="project-portfolio" className="mb-20">
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
+            className="mt-20"
+          >
+            <h3 className="text-3xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600">
+              Project Portfolio
+            </h3>
+            <div className="grid gap-8 md:grid-cols-2">
+              {projects.map((project, index) => (
+                <motion.div
+                  key={project.title}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.1 }}
+                  className="group bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden hover:-translate-y-2"
+                >
+                  <div className="p-8">
+                    <div className="mb-6">
+                      <h4 className="text-xl font-bold mb-2 text-gray-800 group-hover:text-blue-600 transition-colors">
+                        {project.title}
+                      </h4>
+                      {project.client && (
+                        <p className="text-gray-600 mb-1">{project.client}</p>
                       )}
-                      {project.location && (
-                        <span className="flex items-center">
-                          <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                          </svg>
-                          {project.location}
-                        </span>
-                      )}
+                      <div className="flex flex-wrap gap-2 items-center text-sm text-gray-500">
+                        {project.duration && (
+                          <span className="flex items-center">
+                            <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                            </svg>
+                            {project.duration}
+                          </span>
+                        )}
+                        {project.location && (
+                          <span className="flex items-center">
+                            <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                            </svg>
+                            {project.location}
+                          </span>
+                        )}
+                      </div>
                     </div>
-                  </div>
 
-                  {project.description && (
-                    <p className="text-gray-600 mb-6">
-                      {project.description}
-                    </p>
-                  )}
+                    {project.description && (
+                      <p className="text-gray-600 mb-6">
+                        {project.description}
+                      </p>
+                    )}
 
-                  {project.highlights && (
-                    <div className="space-y-4">
-                      <div className="bg-gray-50 rounded-lg p-4">
-                        <h5 className="font-semibold text-blue-600 mb-3">Highlights</h5>
+                    {project.highlights && (
+                      <div className="space-y-4">
+                        <div className="bg-gray-50 rounded-lg p-4">
+                          <h5 className="font-semibold text-blue-600 mb-3">Highlights</h5>
+                          <ul className="list-disc list-inside space-y-2">
+                            {project.highlights.map((highlight, idx) => (
+                              <li key={idx} className="text-gray-600 text-sm">
+                                {highlight}
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      </div>
+                    )}
+
+                    {project.techStack && (
+                      <div className="mt-6">
+                        <h5 className="font-semibold text-blue-600 mb-3">Technologies Used</h5>
+                        <div className="flex flex-wrap gap-2">
+                          {project.techStack.map((tech, idx) => (
+                            <span
+                              key={idx}
+                              className="px-3 py-1 text-sm bg-blue-50 text-blue-600 rounded-full hover:bg-blue-100 transition-colors"
+                            >
+                              {tech}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+
+                    {project.impact && (
+                      <div className="mt-6">
+                        <h5 className="font-semibold text-blue-600 mb-3">Project Impact</h5>
                         <ul className="list-disc list-inside space-y-2">
-                          {project.highlights.map((highlight, idx) => (
+                          {project.impact.map((item, idx) => (
                             <li key={idx} className="text-gray-600 text-sm">
-                              {highlight}
+                              {item}
                             </li>
                           ))}
                         </ul>
                       </div>
-                    </div>
-                  )}
+                    )}
 
-                  {project.techStack && (
-                    <div className="mt-6">
-                      <h5 className="font-semibold text-blue-600 mb-3">Technologies Used</h5>
-                      <div className="flex flex-wrap gap-2">
-                        {project.techStack.map((tech, idx) => (
-                          <span
-                            key={idx}
-                            className="px-3 py-1 text-sm bg-blue-50 text-blue-600 rounded-full hover:bg-blue-100 transition-colors"
-                          >
-                            {tech}
-                          </span>
-                        ))}
+                    {project.gitRepo && (
+                      <div className="mt-6">
+                        <a
+                          href="https://github.com/kunnath/irsveda"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center space-x-2 text-blue-600 hover:text-blue-700 transition-colors"
+                        >
+                          <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path fillRule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.17 6.839 9.49.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.604-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.464-1.11-1.464-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.137 20.167 22 16.42 22 12c0-5.523-4.477-10-10-10z" clipRule="evenodd" />
+                          </svg>
+                          <span>View on GitHub</span>
+                        </a>
                       </div>
-                    </div>
-                  )}
-
-                  {project.impact && (
-                    <div className="mt-6">
-                      <h5 className="font-semibold text-blue-600 mb-3">Project Impact</h5>
-                      <ul className="list-disc list-inside space-y-2">
-                        {project.impact.map((item, idx) => (
-                          <li key={idx} className="text-gray-600 text-sm">
-                            {item}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  )}
-
-                  {project.gitRepo && (
-                    <div className="mt-6">
-                      <a
-                        href="https://github.com/kunnath/irsveda"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center space-x-2 text-blue-600 hover:text-blue-700 transition-colors"
-                      >
-                        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                          <path fillRule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.17 6.839 9.49.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.604-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.464-1.11-1.464-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.137 20.167 22 16.42 22 12c0-5.523-4.477-10-10-10z" clipRule="evenodd" />
-                        </svg>
-                        <span>View on GitHub</span>
-                      </a>
-                    </div>
-                  )}
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
+                    )}
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+        </section>
       </div>
     </section>
   );
