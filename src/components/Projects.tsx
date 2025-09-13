@@ -344,6 +344,7 @@ const Projects = () => {
       client: "Service Industry",
       duration: "Feb 2025 - May 2025",
       description: "Developed a comprehensive multilingual booking platform for cleaning services",
+      gitRepo: "https://github.com/kunnath/CleaningServiceManagementSystem.git",
       highlights: [
         "Implemented secure payment gateway integration",
         "Built real-time updates system for service status",
@@ -506,7 +507,7 @@ const Projects = () => {
     },
     {
       title: "IridoVeda - Advanced Iris Analysis & Traditional Medicine Integration",
-      gitRepo: "IridoVeda",
+      gitRepo: "https://github.com/kunnath/irsveda.git",
       domain: "Healthcare Technology / Computer Vision / AI",
       duration: "2025",
       description: "Developed a comprehensive platform combining advanced iris image analysis with Ayurvedic & Iridology knowledge through AI and computer vision technologies. The platform bridges modern computer vision with traditional medical wisdom.",
@@ -798,7 +799,7 @@ const Projects = () => {
                     {project.gitRepo && (
                       <div className="mt-6">
                         <a
-                          href="https://github.com/kunnath/irsveda"
+                          href={project.gitRepo}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="inline-flex items-center space-x-2 text-blue-600 hover:text-blue-700 transition-colors"
